@@ -1,0 +1,387 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #f4f4f4, #e8e8e8);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #cccccc;
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
+}
+
+/* Fonts Import */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* Background Image */
+.bg-img {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  /* background-image: url('your-image-url.jpg'); */
+  background-color: rgba(244, 244, 244, 0.9);
+}
+
+.bg-img:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(246, 245, 245, 0.85);
+}
+
+/* Content Box */
+.contentR {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 60px 32px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  z-index: 999;
+  text-align: center;
+}
+
+.contentR header {
+  color: #444;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Form Fields */
+.field {
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: rgba(205, 228, 254, 0.94);
+  border-radius: 25px;
+  margin-bottom: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.field span {
+  color: #222;
+  width: 40px;
+  line-height: 45px;
+  padding-left: 10px;
+}
+
+.field input,
+.field select {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+  padding-left: 45px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 25px;
+}
+
+.field button {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.space {
+  margin-top: 16px;
+}
+
+/* Password Visibility Toggle */
+.show {
+  position: absolute;
+  right: 13px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #222;
+  display: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pass-key:valid ~ .show {
+  display: block;
+}
+
+.pass {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.pass a {
+  color: #007bff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pass:hover a {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.field input[type="submit"] {
+  background: #3498db;
+  border: 1px solid #2691d9;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.field input[type="submit"]:hover {
+  background: #2691d9;
+}
+
+/* Login Links */
+.login {
+  color: #333;
+  margin: 20px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.links {
+  display: flex;
+  cursor: pointer;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.facebook, .instagram {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  margin-left: 10px;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.facebook {
+  margin-left: 0;
+  background: #4267B2;
+  border: 1px solid #3e61a8;
+}
+
+.instagram {
+  background: #E1306C;
+  border: 1px solid #df2060;
+}
+
+.facebook:hover {
+  background: #3e61a8;
+}
+
+.instagram:hover {
+  background: #df2060;
+}
+
+.links i {
+  font-size: 17px;
+}
+
+i span {
+  margin-left: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Signup Links */
+.signup {
+  font-size: 15px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signup a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar Styling */
+#navbarSupportedContent {
+  position: relative;
+}
+
+#playful_border {
+  position: absolute;
+  bottom: 0;
+  width: 0px;
+  height: 3px;
+  background-color: rgb(255, 0, 0);
+  transition: .7s;
+}
+
+/* Sections */
+section {
+  padding-top: 40px;
+  margin-top: 40px;
+}
+
+section .content {
+  width: 80%;
+  margin: 90px auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+section .title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+section .title span {
+  color: var(--black-color);
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+section .title span::before,
+section .title span::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--primary-color);
+  left: 0;
+  bottom: 0;
+}
+
+section .title span::after {
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about .about-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .about-details .left {
+  width: 45%;
+}
+
+.about .left img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about .about-details .right {
+  width: 55%;
+}
+
+section .topic {
+  color: var(--black-color);
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.about-details .right p {
+  text-align: justify;
+  color: var(--black-color);
+}
+
+/* Button Styling */
+section .button {
+  margin: 16px 0;
+}
+
+section .button button {
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 25px;
+  font-weight: 400;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+section .button button:hover {
+  border-color: var(--primary-color);
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 400px) {
+  .col-25, .col-75, .content {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* FontAwesome Lock Icon */
+.fa-lock {
+  font-size: 18px;
+  color: #007bff;
+  margin-right: 
+}
